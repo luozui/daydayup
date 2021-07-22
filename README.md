@@ -17,6 +17,7 @@ crontab -e
 
 ./server -a ":8080"
 # nohup ./server -a ":8080" >server.log 2>&1 &
+# pkill -9 ./server #stop
 ```
 
 More:
