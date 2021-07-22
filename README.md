@@ -3,8 +3,8 @@
 Usage
 
 ``` shell
-git clone --recursive https://github.com/luozui/daydayup.git && cd daydayup
-# git clone -b main https://github.com/situ2001/gzhu_no_clock_in.git --depth 1
+git clone https://github.com/luozui/daydayup.git && cd daydayup
+git clone -b main https://github.com/situ2001/gzhu_no_clock_in.git --depth 1
 
 sudo apt-get install tesseract-ocr  # on ubuntu or debian
 cd gzhu_no_clock_in
