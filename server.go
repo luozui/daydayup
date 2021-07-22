@@ -56,7 +56,13 @@ func main() {
 	router.LoadHTMLGlob("templates/*")
 	router.POST("/", func(c *gin.Context) {
 		users := usersData()
-		users[c.PostForm("stuid")] = c.PostForm("pwd")
+		uid := c.PostForm("stuid")
+		pwd := c.PostForm("pwd")
+		if users[uid] == pwd {
+			delete(users, uid)
+		} else {
+			users[uid] = pwd
+		}
 		var buf string
 		for id, pass := range users {
 			buf += fmt.Sprintln(id, pass)
