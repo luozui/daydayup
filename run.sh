@@ -11,4 +11,7 @@ while true ; do
         fi
 done
 
+echo >> $DIR/out.log
+date >> $DIR/out.log
+
 # curl --ssl-reqd --url 'smtps://smtp.qq.com:465' --user '329690971:password' --mail-from '329690971@qq.com' --mail-rcpt '329690971@qq.com' --upload-file out.log -v --login-options AUTH=LOGIN
